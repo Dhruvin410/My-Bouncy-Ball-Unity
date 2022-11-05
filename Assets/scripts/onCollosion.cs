@@ -17,6 +17,11 @@ public class onCollosion : MonoBehaviour {
 
 	public playerMovement movement;
 	public Text gameIsOver;
+	public GameObject gameend;
+	public GameObject scriptpauseUI;
+	public GameObject scriptRestrtMenu;
+
+	
 
 	public void OnCollisionEnter(Collision col) {
 		
@@ -44,5 +49,16 @@ public class onCollosion : MonoBehaviour {
 		
 	}
 
+	if(col.transform.tag == "gameovr")
+	{
+		
+		gameend.SetActive(true);
+		scriptpauseUI.SetActive(false);
+		scriptRestrtMenu.SetActive(false);
+		
 	}
-}
+
+	}
+
+	}
+
